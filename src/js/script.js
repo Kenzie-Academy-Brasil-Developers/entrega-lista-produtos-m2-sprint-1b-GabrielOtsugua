@@ -96,7 +96,7 @@ function resultSection(arr) {
 }
 
 
-function search() {
+function search(arr) {
 
     let ul = document.querySelector("ul")
     let input = document.querySelector(".campoBuscaPorNome")
@@ -106,11 +106,11 @@ function search() {
 
         ul.innerHTML = ""
 
-        let searchList = produtos.filter(element => {
+        let searchList = arr.filter(element => {
             
-            return input.value == element.nome
+            return input.value == element.nome.toLowerCase()
         })
         products(searchList)
     })
 }
-search()
+search(produtos)
