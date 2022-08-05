@@ -92,6 +92,18 @@ function btnFilter(arr, idBtn, nomeSecao) {
                 ul.appendChild(li)
 
                 lista.push(element)
+
+                button.addEventListener("click", (e) => {
+
+                    const id = e.target.id
+        
+                    let click = arr.find(element => {
+                        return element.id == id
+                    })
+                    carrinho.push(click)
+        
+                    addAoCarrinho(carrinho)
+                })
             }
             else if (nomeSecao === "Todos") {
 
@@ -121,6 +133,18 @@ function btnFilter(arr, idBtn, nomeSecao) {
                 ul.appendChild(li)
 
                 lista.push(element)
+
+                button.addEventListener("click", (e) => {
+
+                    const id = e.target.id
+        
+                    let click = arr.find(element => {
+                        return element.id == id
+                    })
+                    carrinho.push(click)
+        
+                    addAoCarrinho(carrinho)
+                })
             }
         });
         // resultSection(lista)
